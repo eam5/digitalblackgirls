@@ -1,0 +1,73 @@
+.mm-spn.mm-spn--light{
+    background: #000;
+    border-color: #fff;
+    color: #fff;
+}
+
+.mm-spn li:after, .mm-spn a:not(:last-child):after, .mm-spn li:before, 
+.mm-spn.mm-spn--navbar ul:before,
+.mm-spn.mm-spn--navbar:before {
+    border-color: $purple; //#fff;
+    opacity: 1;
+}
+
+// .mm-spn li:after { 
+//     border-top: 2px solid;
+//     border-color: $purple; //#fff;
+
+// }
+
+.mm-spn.mm-spn--navbar:after {
+    opacity: 0.65;
+ }
+
+.mm-spn  {
+    // font: inherit;
+    font-family: $heading-font;
+    font-size: 1.35 * $base-font-size;
+    line-height: 1.35 * $base-line-height;
+    font-weight: 500;
+}
+
+.mm-spn a:hover {
+    background: $purple;
+    color:#fff;
+}
+
+// .mm-menu {
+//     background: #000;
+//     border-color: #fff;
+//     color: #fff;
+// }
+
+// .mm-selected {
+//     background: #fff;
+//     border-color: $blue;
+//     color: $blue;
+// }
+
+// .mm-menu .mm-navbar a, .mm-menu .mm-navbar>* {
+//     color: #fff;
+// }
+
+// .mm-menu .mm-listview {
+//     border-color: $blue; //#fff;
+// }
+
+// .mm-listview>li .mm-next:after {
+//     border-color: $blue; //#fff;
+// }
+
+// .mm-menu .mm-listview>li .mm-next:after {
+//     border-color: $blue; //#fff;
+// }
+
+// .mm-menu .mm-btn:after, .mm-menu .mm-btn:before {
+//     border-color: $blue; //#fff;
+// }
+
+// .mm-listview {
+//     // font: inherit;
+//     font-size: 1.5 * $base-font-size;
+//     line-height: 1.5 * $base-line-height;
+// }
