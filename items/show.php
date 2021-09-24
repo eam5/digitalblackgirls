@@ -29,7 +29,9 @@ if ($hasVisualMedia) {
 echo head(array('title' => $title, 'bodyclass' => 'items show' .  (($hasVisualMedia) ? ' gallery' : '')));
 ?>
 
+  
 <div class="flex">
+
 <!-- The following returns all of the files associated with an item. -->
 <?php if ($hasVisualMedia): ?>
     <ul id="itemfiles" <?php echo (count($visualMedia) == 1) ? 'class="solo"' : ''; ?>>
@@ -76,7 +78,8 @@ echo head(array('title' => $title, 'bodyclass' => 'items show' .  (($hasVisualMe
                     </video>
                 </div>
                 <div class="media-render">
-                    <?php echo file_image('fullsize', array(), $mediaFile); ?>
+                    <?php echo files_for_item(); ?>
+                    <!-- <?php echo file_image('fullsize', array(), $mediaFile); ?> -->
                 </div>
                 <div class="media-link">
                     <a href="<?php echo $fileUrl; ?>"><?php echo metadata($mediaFile, 'rich_title', array('no_escape' => true)); ?></a>
@@ -86,6 +89,7 @@ echo head(array('title' => $title, 'bodyclass' => 'items show' .  (($hasVisualMe
         <?php endforeach; ?>
     </ul>
 <?php endif; ?>
+
 
 <div class="item-metadata">
     <nav>

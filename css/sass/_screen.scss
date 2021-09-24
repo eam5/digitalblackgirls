@@ -6,6 +6,15 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 html {
     font-family: $body-font;
     font-weight: 500;//400;
@@ -24,7 +33,7 @@ strong {
 
 a {
     text-decoration: none;
-    color: $blue;
+    color: $purple;
 }
 
 h1, h2 {
@@ -184,9 +193,11 @@ select {
 }
 
 #content {
+    flex: 1 0 auto;
+
     margin:$spacing-m;
     padding: $spacing-l $spacing-m;
-    min-height: 65vh;
+    // min-height: 65vh;
 }
 
 a.image {
@@ -253,6 +264,9 @@ header {
 }
 
 #wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     position: relative;
     z-index: 2;
     background-color: #fff;
@@ -406,7 +420,7 @@ header {
     border: 0;
     background-color: #fff;
     text-indent: -9999px;
-    color: $blue;
+    color: $purple;
     position: relative;
     display: inline-block;
     padding: 0;
@@ -457,6 +471,7 @@ header {
 /* @group ----- Footer ----- */
 
 footer {
+    flex-shrink: 0;
     padding: $spacing-l;
     background-color: #000;
     color: #fff;
@@ -554,45 +569,25 @@ footer {
 #welcome-banner {
     position: relative;
     height: 75vh;
-    // text-align: center;
+    max-height: 650px;
     display: flex;
     flex-direction: column;
-
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    // background: #fff url("../img/women-banner-4.jpeg") center no-repeat;
-        // background: #fff url("../img/women-banner-3.jpeg") center no-repeat;
-    // background: #fff url("../img/friends-3.jpeg") center no-repeat;
-    // background: #fff url("../img/doubledutch-2.jpeg") center no-repeat;
-    // background: #fff url("../img/girl.jpeg") center no-repeat;
-    // background: #fff url("../img/girls.jpeg") center no-repeat;
-    // background: #fff url("../img/kiana-3.jpeg") center no-repeat;
-    // background: #fff url("../img/cheer.jpg") center no-repeat;
-
-    // background-size: cover;
-
-    // line-height: 4.2 * $base-font-size;
-    // font-size: 4 * $base-font-size;  
-    // font-weight: 700; 
     color: #fff;
     background-color: #777;
     mix-blend-mode: multiply;
     h1 {
         text-align: center;
-        // font-family: "Neue Machina", sans-serif;
-        // display: inline-block;
         line-height: 4.2 * $base-font-size;
         font-size: 4 * $base-font-size;  
         font-weight: 700; 
-        // color: #fff;
         padding: 0 $spacing-l;
-        // text-shadow: 3px 3px 20px #222;
-
         @media (max-width: 650px) {
             line-height: 2.5 * $base-font-size;
-        font-size: 2.5 * $base-font-size;
-        padding: $spacing-s
+            font-size: 2.5 * $base-font-size;
+            padding: $spacing-s
         }
     }
     
@@ -601,10 +596,9 @@ footer {
 #welcome-banner::before{
     content: '';
     position: absolute;
-    // top: 0;
-    // left: 0;
     width: 100%;
     height: 75vh;
+    max-height: 650px;
     background-color: #fff;
     background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)),url("../img/girl.jpeg");
     background-size: cover;
@@ -616,6 +610,7 @@ footer {
 #banner-footer {
     position: relative;
     height: 75vh;
+    max-height: 650px;
     background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)),url("../img/dancers.jpeg");
     background-size: cover;
     background-position: center;
@@ -666,12 +661,9 @@ footer {
     align-content: center;
     justify-content: center;
     font-family: $heading-font;
-    // font-family: "Neue Machina", sans-serif;
-    // line-height: 1.5 * $base-line-height;
-    // font-size: 1.5 * $base-font-size;
     color: #fff;
     height: 50vh;
-
+    max-height: 500px;
     @media screen and (max-width: 650px) {
         width: 100%;
     }
@@ -685,8 +677,6 @@ footer {
 
 
 .module-background {
-    // background-image: linear-gradient(-235deg, rgb(28, 255, 199),rgb(154, 76, 255));
-
     background-image: linear-gradient(-235deg, rgb(28, 255, 199),rgb(111, 15, 255));
     z-index: 1;
     @media screen and (max-width: 650px) {
@@ -701,7 +691,6 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    // background-image: linear-gradient(315deg, rgb(28, 255, 199),rgb(154, 76, 255));
     background-image: linear-gradient(315deg, rgb(28, 255, 199),rgb(111, 15, 255));
     z-index: -1;
     transition: opacity 0.75s;
@@ -709,8 +698,8 @@ footer {
 }
   
 .module {
-    background: #000; //#f3f3f3;
-    font-family: $heading-font;//"Neue Machina", sans-serif;
+    background: #000;
+    font-family: $heading-font;
     line-height: 1.5 * $base-line-height;
     font-size: 1.5 * $base-font-size;
     padding: $spacing-m;
@@ -721,49 +710,6 @@ footer {
     width: 100%;
     height:100%;
 }
-
-// .photo-box {
-//     // position: relative;
-//     // height: 50vh;
-//     // text-align: center;
-//     // display: flex;
-//     // flex-direction: column;
-//     // flex-wrap: wrap;
-//     // align-content: center;
-//     // justify-content: center;
-
-//     border: 16px solid $purple;
-//     // font-family: $body-font;
-//     // font-size: 6 * $base-font-size;
-//     // text-transform: uppercase;
-//     // font-weight: 900;
-//     // color: #fff;
-//     // background-color: #777;
-//     // background-color: #000;
-//     // background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)),url("../img/kiana-3.jpeg");
-
-//     // background-size: cover;
-//     // background-position: center;
-//     // background-repeat: no-repeat;
-
-//     // mix-blend-mode: multiply;
-// }
-
-// .photo-box::before{
-//         content: '';
-//         position: absolute;
-//         // top: 0;
-//         // left: 0;
-//         width: 100%;
-//         height: 50vh;
-//         background-color: #fff;
-//         background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)),url("../img/kiana-3.jpeg");
-    
-//         background-size: cover;
-//         background-position: center;
-//         background-repeat: no-repeat;
-//         mix-blend-mode:overlay;
-//     }
 
 .box-photo-1 {
     background: #000 url("../img/mother.jpeg") center no-repeat;
@@ -828,35 +774,14 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    // font-weight: 900;
     margin: 0;
     background: $purple;
-    font-family: $heading-font;//"Neue Machina", sans-serif;
-    // font-family: $heading-font;
+    font-family: $heading-font;
     font-size: 2.5 * $base-font-size;
     line-height: 2.5 *$base-line-height;
-    // text-transform: uppercase;
-    font-weight: 800;//900;
+    font-weight: 800;
     color: #fff;
 }
-
-// .box-text-rect {
-//     position: absolute;
-//     top: 60%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     width:150px;
-//     height:90px;
-//     background: #000;
-// }
-
-// .box:hover {
-//     border: 10px solid $green;
-// }
-
-// .box:hover .module {
-//     text-decoration: underline;
-// }
 
 .module-background:hover::before {
     opacity: 1;
@@ -1162,6 +1087,7 @@ ul#itemfiles {
 .lSSlideOuter .media-render img {
     max-height: 100%;
     width: auto;
+    cursor: pointer;
 }
 
 .lSSlideOuter .lSPager.lSGallery {

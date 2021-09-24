@@ -27,7 +27,7 @@
   opacity: 0.65; }
 
 .mm-spn {
-  font-family: "Montserrat", "Libre Baskerville", "Raleway", "Open Sans", "Source Code Pro", "Abril Fatface", "Permanent Marker", "Neue Machina", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.35rem;
   line-height: 28.35px;
   font-weight: 500; }
@@ -39,6 +39,11 @@
 @media screen {
   * {
     box-sizing: border-box; }
+  html, body {
+    height: 100%; }
+  body {
+    display: flex;
+    flex-direction: column; }
   html {
     font-family: "Raleway", sans-serif;
     font-weight: 500;
@@ -53,7 +58,7 @@
     text-decoration: none;
     color: #6F0FFF; }
   h1, h2 {
-    font-family: "Montserrat", "Libre Baskerville", "Raleway", "Open Sans", "Source Code Pro", "Abril Fatface", "Permanent Marker", "Neue Machina", sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin: 21px 0;
     letter-spacing: 2px; }
   h3, h4, h5, h6 {
@@ -95,7 +100,7 @@
   table {
     margin: 21px auto; }
   thead {
-    font-family: "Montserrat", "Libre Baskerville", "Raleway", "Open Sans", "Source Code Pro", "Abril Fatface", "Permanent Marker", "Neue Machina", sans-serif; }
+    font-family: "Montserrat", sans-serif; }
   tr {
     border-bottom: 1px solid #eee; }
   /* @group ----- Form ----- */
@@ -158,9 +163,9 @@
   .flex {
     display: flex; }
   #content {
+    flex: 1 0 auto;
     margin: 10.5px;
-    padding: 21px 10.5px;
-    min-height: 65vh; }
+    padding: 21px 10.5px; }
   a.image {
     display: block; }
   a.image img {
@@ -201,6 +206,9 @@
     header a {
       color: #fff; }
   #wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     position: relative;
     z-index: 2;
     background-color: #fff;
@@ -279,7 +287,7 @@
     flex-wrap: wrap;
     justify-content: center; }
   #search-container legend {
-    font-family: "Montserrat", "Libre Baskerville", "Raleway", "Open Sans", "Source Code Pro", "Abril Fatface", "Permanent Marker", "Neue Machina", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1.125rem;
     margin-bottom: 5.25px; }
   #search-form {
@@ -337,6 +345,7 @@
   /* @end */
   /* @group ----- Footer ----- */
   footer {
+    flex-shrink: 0;
     padding: 21px;
     background-color: #000;
     color: #fff;
@@ -405,6 +414,7 @@
   #welcome-banner {
     position: relative;
     height: 75vh;
+    max-height: 650px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -431,6 +441,7 @@
     position: absolute;
     width: 100%;
     height: 75vh;
+    max-height: 650px;
     background-color: #fff;
     background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url("../img/girl.jpeg");
     background-size: cover;
@@ -440,6 +451,7 @@
   #banner-footer {
     position: relative;
     height: 75vh;
+    max-height: 650px;
     background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url("../img/dancers.jpeg");
     background-size: cover;
     background-position: center;
@@ -478,9 +490,10 @@
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    font-family: "Montserrat", "Libre Baskerville", "Raleway", "Open Sans", "Source Code Pro", "Abril Fatface", "Permanent Marker", "Neue Machina", sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: #fff;
-    height: 50vh; } }
+    height: 50vh;
+    max-height: 500px; } }
   @media screen and (max-width: 650px) {
     .content-box .box {
       width: 100%; } }
@@ -511,7 +524,7 @@
     opacity: 0; }
   .module {
     background: #000;
-    font-family: "Montserrat", "Libre Baskerville", "Raleway", "Open Sans", "Source Code Pro", "Abril Fatface", "Permanent Marker", "Neue Machina", sans-serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 31.5px;
     font-size: 1.5rem;
     padding: 10.5px;
@@ -568,7 +581,7 @@
     transform: translate(-50%, -50%);
     margin: 0;
     background: #6F0FFF;
-    font-family: "Montserrat", "Libre Baskerville", "Raleway", "Open Sans", "Source Code Pro", "Abril Fatface", "Permanent Marker", "Neue Machina", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 2.5rem;
     line-height: 52.5px;
     font-weight: 800;
@@ -780,7 +793,8 @@
     align-items: center; }
   .lSSlideOuter .media-render img {
     max-height: 100%;
-    width: auto; }
+    width: auto;
+    cursor: pointer; }
   .lSSlideOuter .lSPager.lSGallery {
     position: absolute;
     bottom: 0;
@@ -894,7 +908,7 @@
   #search-filters > ul > li {
     background-color: #eee;
     padding: 5.25px;
-    font-family: "Montserrat", "Libre Baskerville", "Raleway", "Open Sans", "Source Code Pro", "Abril Fatface", "Permanent Marker", "Neue Machina", sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     display: inline-block; }
   #item-filters > ul ul,
@@ -1092,7 +1106,7 @@
   .browse .image + .record-meta {
     padding-left: 0; }
   .view-items-link {
-    font-family: "Montserrat", "Libre Baskerville", "Raleway", "Open Sans", "Source Code Pro", "Abril Fatface", "Permanent Marker", "Neue Machina", sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     font-size: 1rem;
     line-height: 21px;
@@ -1172,7 +1186,7 @@
     list-style: decimal;
     font-size: 1.5rem;
     line-height: 31.5px;
-    font-family: "Montserrat", "Libre Baskerville", "Raleway", "Open Sans", "Source Code Pro", "Abril Fatface", "Permanent Marker", "Neue Machina", sans-serif; }
+    font-family: "Montserrat", sans-serif; }
   #exhibit-pages li {
     margin: 21px 0; }
   .exhibit-block {
@@ -1203,7 +1217,7 @@
     top: 50%;
     transform: translateY(-50%);
     width: 10%;
-    font-family: "Montserrat", "Libre Baskerville", "Raleway", "Open Sans", "Source Code Pro", "Abril Fatface", "Permanent Marker", "Neue Machina", sans-serif;
+    font-family: "Montserrat", sans-serif;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     padding: 20px 0;
@@ -1383,7 +1397,7 @@
   .collection-meta .mobile-toggle {
     display: block;
     text-transform: uppercase;
-    font-family: "Montserrat", "Libre Baskerville", "Raleway", "Open Sans", "Source Code Pro", "Abril Fatface", "Permanent Marker", "Neue Machina", sans-serif;
+    font-family: "Montserrat", sans-serif;
     padding: 9.5px 0;
     border: solid #eee;
     border-width: 1px 0; }

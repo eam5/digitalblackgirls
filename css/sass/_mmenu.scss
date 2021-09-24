@@ -11,12 +11,6 @@
     opacity: 1;
 }
 
-// .mm-spn li:after { 
-//     border-top: 2px solid;
-//     border-color: $purple; //#fff;
-
-// }
-
 .mm-spn.mm-spn--navbar:after {
     opacity: 0.65;
  }
@@ -33,41 +27,3 @@
     background: $purple;
     color:#fff;
 }
-
-// .mm-menu {
-//     background: #000;
-//     border-color: #fff;
-//     color: #fff;
-// }
-
-// .mm-selected {
-//     background: #fff;
-//     border-color: $blue;
-//     color: $blue;
-// }
-
-// .mm-menu .mm-navbar a, .mm-menu .mm-navbar>* {
-//     color: #fff;
-// }
-
-// .mm-menu .mm-listview {
-//     border-color: $blue; //#fff;
-// }
-
-// .mm-listview>li .mm-next:after {
-//     border-color: $blue; //#fff;
-// }
-
-// .mm-menu .mm-listview>li .mm-next:after {
-//     border-color: $blue; //#fff;
-// }
-
-// .mm-menu .mm-btn:after, .mm-menu .mm-btn:before {
-//     border-color: $blue; //#fff;
-// }
-
-// .mm-listview {
-//     // font: inherit;
-//     font-size: 1.5 * $base-font-size;
-//     line-height: 1.5 * $base-line-height;
-// }

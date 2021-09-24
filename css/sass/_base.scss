@@ -21,18 +21,21 @@ $base-line-height: 21px;
 	-moz-osx-font-smoothing: grayscale;
 }
 
-$heading-font: "Montserrat","Libre Baskerville","Raleway","Open Sans","Source Code Pro","Abril Fatface","Permanent Marker", "Neue Machina", sans-serif;
-$body-font: "Raleway", sans-serif;//"Noto Sans", sans-serif; "Montserrat",
+$heading-font: "Montserrat", sans-serif;
+$body-font: "Raleway", sans-serif;
 
 $spacing-s: .25 * $base-line-height;
 $spacing-m: .5 * $base-line-height;
 $spacing-l: $base-line-height;
 
 $border-gray: #eee;
-$blue: #6F0FFF;//#3e8bff;
+$purple: #6F0FFF;
 $lightpurple:#a15dff;
+
+
+// $blue: #6F0FFF;
 $hotpink: #FF03A2;
 $pink: #F11FFF;
-$purple: #6F0FFF;
+
 $green: #1CFFC7;
 $yellow: #FFF612;
