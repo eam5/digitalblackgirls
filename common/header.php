@@ -29,19 +29,14 @@
     <?php
         queue_css_file(array('normalize', 'mmenu-light', 'style'));
 
-    // queue_css_file(array('normalize','jquery.mmenu', 'jquery.mmenu.positioning','style'));
-    queue_css_url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@400;500;600;700;900&family=Raleway:wght@400;500;600;700;900&family=Roboto:wght@400;500;700&display=swap');
-    queue_css_url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Permanent+Marker&family=Source+Code+Pro:wght@600;700;900&display=swap');
-    queue_css_url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500;600;700;800;900&family=Source+Serif+Pro:wght@400;600;700;900&display=swap');
+    queue_css_url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Raleway:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600&display=swap');
     echo head_css();
     ?>
 
     <!-- JavaScripts -->
     <?php 
         queue_js_file(array('mmenu-light','mmenu-light.polyfills','digitalblackgirls', 'globals'), 'js');
-        // queue_js_file('globals');
-    // queue_js_file(array('jquery.mmenu.min','bigpicture'), 'js');
-    echo head_js(); 
+        echo head_js(); 
     ?>
 </head>
 

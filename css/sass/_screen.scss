@@ -61,7 +61,7 @@ h1 {
     content: " ";
     height: .35rem;
     width: 75px;
-    background: $purple;//linear-gradient(45deg, rgb(111, 15, 255),rgb(28, 255, 199));////rgba(255, 128, 0, 0.75);
+    background: $purple;
     margin: 1.5rem auto 2.5rem;
 }
 
@@ -194,10 +194,8 @@ select {
 
 #content {
     flex: 1 0 auto;
-
     margin:$spacing-m;
     padding: $spacing-l $spacing-m;
-    // min-height: 65vh;
 }
 
 a.image {
@@ -242,25 +240,17 @@ a.image img {
 
 header {
     padding: $spacing-m $spacing-m ($spacing-m - 1px) $spacing-m;
-
-    // padding: $spacing-l $spacing-l ($spacing-l - 1px) $spacing-l;
-    // border-bottom: 1px solid $border-gray;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     z-index: 9998;
     background-color: #000;
-    // border-top: 1px solid $purple;
-    // border-top: 1px solid #eee;
 
     a {
-        color: #fff;//$lightpurple;
+        color: #fff;
     }
 
-    // .search-toggle:hover, .menu-toggle:hover {
-    //     color:$green
-    // }
 }
 
 #wrap {
@@ -300,9 +290,6 @@ header {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 
-  /* Animate the text when loading the element. */
-    /* This animates it on page load and when hovering out. */
-    // animation: rainbow-text-simple-animation-rev 0.5s ease forwards;
     transition: background-size 1s;
 
     @media (max-width: 650px) {
@@ -313,43 +300,7 @@ header {
 
 #site-title:hover{
     background-size: 600%;
-    // animation: rainbow-text-simple-animation 0.5s ease-in forwards;
 }
-
-
-/* Move the background and make it smaller. */
-/* Animation shown when entering the page and after the hover animation. */
-// @keyframes rainbow-text-simple-animation-rev {
-//     0% {
-//         background-size: 650%;
-//     }
-//     40% {
-//         background-size: 650%;
-//     }
-//     100% {
-//         background-size: 100%;
-//     }
-// }
-
-/* Move the background and make it larger. */
-/* Animation shown when hovering over the text. */
-// @keyframes rainbow-text-simple-animation {
-//     0% {
-//         background-size: 100%;
-//     }
-//     80% {
-//         background-size: 650%;
-//     }
-//     100% {
-//         background-size: 650%;
-//     }
-// }
-
-// #site-title img {
-//     max-height: 1.5 * $spacing-l;
-//     width: auto;
-//     vertical-align: top;
-// }
 
 .search-toggle:before,
 .menu-toggle:before,
@@ -389,7 +340,6 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    // border-bottom: 1px solid $border-gray;
 }
 
 #search-container legend {
@@ -543,7 +493,7 @@ footer {
       svg {
         height: 2.5em;
         margin-bottom: 0;
-        fill:$lightpurple;//rgba($lightpurple, 0.75);
+        fill:$lightpurple;
         transform: translate(0.5rem, 0);
         &:hover {
             fill:#ffff;
@@ -644,9 +594,6 @@ footer {
         color: #ffff;
     }
 
-    // span a {
-    //     text-transform: uppercase;
-    // }
 }
 #homepage-footer span:after {
     content: "   |   ";
@@ -655,12 +602,6 @@ footer {
     @media (max-width: 650px) { 
         display: none;
     }
-    // display: block;
-    // content: " ";
-    // height: .15rem;
-    // width: 115px;
-    // background: $lightpurple;//linear-gradient(45deg, rgb(111, 15, 255),rgb(28, 255, 199));////rgba(255, 128, 0, 0.75);
-    // margin: 1rem auto;
 }
 
 
@@ -953,6 +894,7 @@ a[class^='box-']:hover, a[class*='box-']:hover {
 }
 
 .records h3 {
+    font-family: $heading-font;
     margin-bottom: $spacing-m;
     font-size: 1.25 * $base-font-size;
     text-transform: none;
