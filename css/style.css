@@ -350,7 +350,8 @@
     background-color: #000;
     color: #fff;
     font-weight: 600;
-    text-align: center; }
+    text-align: center;
+    font-family: "Montserrat", sans-serif; }
     footer .navigation {
       text-align: start; }
       footer .navigation li {
@@ -377,6 +378,9 @@
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center; }
+    .footer-content nav {
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase; }
   .to-top {
     display: none; }
     .to-top a {
@@ -458,23 +462,26 @@
     background-repeat: no-repeat; }
   #homepage-footer {
     display: flex;
-    flex-flow: column nowrap;
+    justify-content: center;
+    flex-flow: row wrap;
     text-align: center;
-    padding: 21px;
+    padding: 10.5px 10.5px 0;
     background-color: #000;
     color: #fff;
     font-weight: 600; }
     #homepage-footer a {
-      color: #a15dff; }
+      color: #a15dff;
+      text-transform: uppercase; }
     #homepage-footer a:hover {
       color: #ffff; }
   #homepage-footer span:after {
-    display: block;
-    content: " ";
-    height: .15rem;
-    width: 115px;
-    background: #a15dff;
-    margin: 1rem auto; }
+    content: "   |   ";
+    padding: 0 1rem; } }
+  @media screen and (max-width: 650px) {
+    #homepage-footer span:after {
+      display: none; } }
+
+@media screen {
   .content-box {
     display: flex;
     flex-wrap: wrap;
@@ -536,6 +543,10 @@
     height: 100%; }
   .box-photo-1 {
     background: #000 url("../img/mother.jpeg") center no-repeat;
+    background-size: cover;
+    border: 16px solid #6F0FFF; }
+  .box-photo-2 {
+    background: #000 url("../img/Sisters-reading.jpeg") center no-repeat;
     background-size: cover;
     border: 16px solid #6F0FFF; }
   .box-video-1 {
@@ -793,7 +804,7 @@
     align-items: center; }
   .lSSlideOuter .media-render img {
     max-height: 100%;
-    width: auto;
+    max-width: 100%;
     cursor: pointer; }
   .lSSlideOuter .lSPager.lSGallery {
     position: absolute;

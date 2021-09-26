@@ -477,6 +477,8 @@ footer {
     color: #fff;
     font-weight: 600;
     text-align: center;
+    font-family: $heading-font;
+
 
     .navigation {
         text-align: start;
@@ -521,7 +523,13 @@ footer {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+
+    nav {
+        font-family: $heading-font;
+        text-transform: uppercase;
+    }
 }
+
 
 .to-top {
     display: none;
@@ -619,27 +627,40 @@ footer {
 
 #homepage-footer {
     display: flex;
-    flex-flow: column nowrap;
+    // flex-flow: column nowrap;
+    justify-content: center;
+    flex-flow: row wrap;
     text-align: center;
-    padding: $spacing-l;
+    padding:  $spacing-m $spacing-m 0;
     background-color: #000;
     color: #fff;
     font-weight: 600;
     a {
         color: $lightpurple;
+        text-transform: uppercase;
     }
 
     a:hover {
         color: #ffff;
     }
+
+    // span a {
+    //     text-transform: uppercase;
+    // }
 }
 #homepage-footer span:after {
-    display: block;
-    content: " ";
-    height: .15rem;
-    width: 115px;
-    background: $lightpurple;//linear-gradient(45deg, rgb(111, 15, 255),rgb(28, 255, 199));////rgba(255, 128, 0, 0.75);
-    margin: 1rem auto;
+    content: "   |   ";
+    padding: 0 1rem;
+
+    @media (max-width: 650px) { 
+        display: none;
+    }
+    // display: block;
+    // content: " ";
+    // height: .15rem;
+    // width: 115px;
+    // background: $lightpurple;//linear-gradient(45deg, rgb(111, 15, 255),rgb(28, 255, 199));////rgba(255, 128, 0, 0.75);
+    // margin: 1rem auto;
 }
 
 
@@ -713,6 +734,12 @@ footer {
 
 .box-photo-1 {
     background: #000 url("../img/mother.jpeg") center no-repeat;
+    background-size: cover;
+    border: 16px solid $purple;
+}
+
+.box-photo-2 {
+    background: #000 url("../img/Sisters-reading.jpeg") center no-repeat;
     background-size: cover;
     border: 16px solid $purple;
 }
@@ -1086,7 +1113,8 @@ ul#itemfiles {
 
 .lSSlideOuter .media-render img {
     max-height: 100%;
-    width: auto;
+    // width: auto;
+    max-width: 100%;
     cursor: pointer;
 }
 
