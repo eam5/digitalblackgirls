@@ -1,26 +1,6 @@
 $base-font-size: 1rem; //14px;
 $base-line-height: 21px;
 
-@font-face {
-	font-family: 'Neue Machina';
-	src:url('../fonts/NeueMachina-Regular.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-} 
-@mixin neuemachina {
-    font-family: 'Neue Machina';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
 $heading-font: "Montserrat", sans-serif;
 $body-font: "Raleway", sans-serif;
 
