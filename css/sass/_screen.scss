@@ -198,6 +198,11 @@ select {
     padding: $spacing-l $spacing-m;
 }
 
+#content #primary {
+    max-width: 1000px;
+    margin: auto;
+}
+
 a.image {
     display: block;
 }
@@ -1601,7 +1606,7 @@ font-size: 240%;
 
 .exhibits.summary #primary, 
 #exhibit-blocks,
-#exhibit-pages, {
+#exhibit-pages {
     width: 70%;
     margin: auto;
 }
@@ -1737,6 +1742,10 @@ font-size: 240%;
 
 /* @end */
 
+/* @group ----- Simple pages ----- */
+
+
+/* @end */
 /* @group ----- Plugins ----- */
 
 #geolocation-browse {
