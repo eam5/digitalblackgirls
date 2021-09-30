@@ -371,9 +371,9 @@
     text-align: center;
     font-size: 0.85rem; }
   #copyright-text span:after {
-    content: "   |   ";
-    padding: 0 1rem; } }
-  @media screen and (max-width: 320px) {
+    content: " | ";
+    padding: 0 0.25rem; } }
+  @media screen and (max-width: 355px) {
     #copyright-text span:after {
       display: none; } }
 

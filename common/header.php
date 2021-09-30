@@ -51,7 +51,7 @@
     <div id="wrap">
         <a href="#content" id="skipnav"><?php echo __('Skip to main content'); ?></a>
         <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
-        <header id="header-content" role="banner">
+        <header id="explore" role="banner">
 
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
 

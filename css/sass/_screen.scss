@@ -472,11 +472,6 @@ footer {
     }
 
     p { margin: $spacing-m 0;}
-
-    // span { 
-    //     font-size: 0.9 * $base-font-size;
-    //     // font-weight: 500;
-    // }
 }
 
 #footer-text {
@@ -488,10 +483,10 @@ footer {
 }
 
 #copyright-text span:after {
-    content: "   |   ";
-    padding: 0 1rem;
+    content: " | ";
+    padding: 0 0.25rem;
 
-    @media (max-width: 320px) { 
+    @media (max-width: 355px) { 
         display: none;
     }
 
