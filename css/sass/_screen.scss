@@ -481,12 +481,22 @@ footer {
 
 #footer-text {
     display: flex;
-    // flex-flow: column nowrap;
     justify-content: center;
     flex-flow: row wrap;
     text-align: center;
     font-size: 0.85 * $base-font-size;
 }
+
+#copyright-text span:after {
+    content: "   |   ";
+    padding: 0 1rem;
+
+    @media (max-width: 320px) { 
+        display: none;
+    }
+
+}
+
 .footer-content {
     display: flex;
     flex-flow: row nowrap;
@@ -630,7 +640,7 @@ footer {
 
 }
 
-#homepage-footer span:after, #copyright-text span:after {
+#homepage-footer span:after {
     content: "   |   ";
     padding: 0 1rem;
 
@@ -638,7 +648,6 @@ footer {
         display: none;
     }
 }
-
 
 .content-box {
     display: flex;

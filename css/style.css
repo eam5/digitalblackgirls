@@ -370,6 +370,14 @@
     flex-flow: row wrap;
     text-align: center;
     font-size: 0.85rem; }
+  #copyright-text span:after {
+    content: "   |   ";
+    padding: 0 1rem; } }
+  @media screen and (max-width: 320px) {
+    #copyright-text span:after {
+      display: none; } }
+
+@media screen {
   .footer-content {
     display: flex;
     flex-flow: row nowrap;
@@ -487,11 +495,11 @@
       font-weight: 600; }
     #homepage-footer a:hover {
       color: #ffff; }
-  #homepage-footer span:after, #copyright-text span:after {
+  #homepage-footer span:after {
     content: "   |   ";
     padding: 0 1rem; } }
   @media screen and (max-width: 650px) {
-    #homepage-footer span:after, #copyright-text span:after {
+    #homepage-footer span:after {
       display: none; } }
 
 @media screen {
