@@ -430,7 +430,7 @@ footer {
     padding: $spacing-l;
     background-color: #000;
     color: #fff;
-    font-weight: 600;
+    // font-weight: 600;
     text-align: center;
     font-family: $heading-font;
 
@@ -464,6 +464,7 @@ footer {
 
     a {
         color: $lightpurple;
+        font-weight: 600;
     }
 
     a:hover {
@@ -471,8 +472,21 @@ footer {
     }
 
     p { margin: $spacing-m 0;}
+
+    // span { 
+    //     font-size: 0.9 * $base-font-size;
+    //     // font-weight: 500;
+    // }
 }
 
+#footer-text {
+    display: flex;
+    // flex-flow: column nowrap;
+    justify-content: center;
+    flex-flow: row wrap;
+    text-align: center;
+    font-size: 0.85 * $base-font-size;
+}
 .footer-content {
     display: flex;
     flex-flow: row nowrap;
@@ -532,7 +546,8 @@ footer {
 #welcome-banner {
     position: relative;
     height: 75vh;
-    max-height: 650px;
+    min-height: 400px;
+    max-height: 700px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -553,6 +568,10 @@ footer {
             padding: $spacing-s
         }
     }
+        min-height: 400px;
+@media (max-width: 650px) {
+    max-height: 500px;
+}
     
 }
 
@@ -561,23 +580,32 @@ footer {
     position: absolute;
     width: 100%;
     height: 75vh;
-    max-height: 650px;
+    min-height: 400px;
+    max-height: 700px;
     background-color: #fff;
     background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)),url("../img/girl.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     mix-blend-mode:overlay;
+
+    @media (max-width: 650px) {
+        max-height: 500px;
+    }
+    
 }
 
 #banner-footer {
     position: relative;
-    height: 75vh;
-    max-height: 650px;
+    height: 50vw;
     background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)),url("../img/dancers.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    @media (max-width: 650px) {
+        height: 400px;
+    }
 }
 
 #homepage-footer {
@@ -589,10 +617,11 @@ footer {
     padding:  $spacing-m $spacing-m 0;
     background-color: #000;
     color: #fff;
-    font-weight: 600;
+    font-weight: 500;
     a {
         color: $lightpurple;
         text-transform: uppercase;
+        font-weight: 600;
     }
 
     a:hover {
@@ -600,7 +629,8 @@ footer {
     }
 
 }
-#homepage-footer span:after {
+
+#homepage-footer span:after, #copyright-text span:after {
     content: "   |   ";
     padding: 0 1rem;
 
@@ -620,6 +650,7 @@ footer {
 .content-box .box {
     position: relative;
     width: calc(50% - 32px);
+    height: calc(50vw - 32px);
     padding: 16px;
     margin: 16px;
     text-align: center;
@@ -629,10 +660,12 @@ footer {
     justify-content: center;
     font-family: $heading-font;
     color: #fff;
-    height: 50vh;
+    // height: 50vh;
+    min-height: 250px;
     max-height: 500px;
     @media screen and (max-width: 650px) {
         width: 100%;
+        height: calc(100vw);
     }
 }
 

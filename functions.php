@@ -101,4 +101,24 @@ function filter_item_citation($citation, $args) {
     return $citation;
 }
 
+
+
+/**
+ * Get the theme's shortcut icon tag.
+ *
+ * @package Omeka\Function\View\Head
+ * @uses get_theme_option()
+ * @return string|null
+ */
+function dbg_theme_icon()
+{
+    $icon = get_theme_option('shortcut_icon');
+    if ($icon) {
+        $storage = Zend_Registry::get('storage');
+        $uri = $storage->getUri($storage->getPathByType($icon, 'theme_uploads'));
+        return '<link rel="shortcut icon" sizes="32x32" href="' . $uri . '" />';
+    }
+
+}
+
 ?>

@@ -1,12 +1,12 @@
         </article>
 
     <footer role="contentinfo">
-        <div id="footer-text">
+        <!-- <div id="footer-text"> -->
             <?php echo get_theme_option('Footer Text'); ?>
-            <?php if ((get_theme_option('Display Footer Copyright') == 1) && $copyright = option('copyright')): ?>
+            <!-- <?php if ((get_theme_option('Display Footer Copyright') == 1) && $copyright = option('copyright')): ?>
                 <p><?php echo $copyright; ?></p>
-            <?php endif; ?>
-        </div>
+            <?php endif; ?> -->
+        <!-- </div> -->
 
         <div class="footer-content">
             <nav>
@@ -19,7 +19,12 @@
             </div>
         </div>
 
+        <div id="footer-text">
+        <?php if ((get_theme_option('Display Footer Copyright') == 1) && $copyright = option('copyright')): ?>
+            <div id="copyright-text"><span ><?php echo $copyright; ?></span></div>
+            <?php endif; ?>
         <span><?php echo __('Proudly powered by <a href="http://omeka.org">Omeka</a>.'); ?></span>
+        </div>
 
         <?php fire_plugin_hook('public_footer', array('view'=>$this)); ?>
     </footer>

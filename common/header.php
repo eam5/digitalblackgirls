@@ -12,6 +12,13 @@
     <?php if ( $description = option('description')): ?>
     <meta name="description" content="<?php echo $description; ?>" />
     <?php endif; ?>
+
+    <!-- Shortcut Icon -->
+  <?php if($icon = dbg_theme_icon()): ?>
+            <?php echo $icon; ?>
+          <?php endif;?>
+  <!-- End Shortcut Icon --> 
+
     <?php
     if (isset($title)) {
         $titleParts[] = strip_formatting($title);
